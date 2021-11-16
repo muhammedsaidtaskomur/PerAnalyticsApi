@@ -5,7 +5,7 @@ require('dotenv/config');
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 var cors = require('cors')
-app.use(cors())
+app.use(cors({ origin: "https://per-analytics-api.herokuapp.com", credentials: true }))
 const analyticsRoute =  require('./routes/analytics');
 app.use('/analytics',analyticsRoute)
 const analyticsListRoute =  require('./routes/analyticsList');
