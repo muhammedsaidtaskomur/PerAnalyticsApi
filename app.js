@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 require('dotenv/config');
-const bodyParser = require('body-parser');
-app.use(bodyParser.json());
 var cors = require('cors')
 app.use(cors())
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
 const helmet = require("helmet");
 app.use(helmet());
 const analyticsRoute =  require('./routes/analytics');
