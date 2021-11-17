@@ -20,4 +20,4 @@ mongoose.connect(
     {useNewUrlParser: true},
     () => { console.log("connected to DB!"); }
 );
-app.listen(4000);
+app.listen(process.env.PORT || 4000);
